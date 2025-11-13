@@ -1,2 +1,85 @@
 # big-corpo-event-webbutveckling-1
+
 Simple HTML, CSS and JavaScript website made for the course "Webbutveckling 1"
+
+## Requirements (A)
+
+### General
+
+-   Correct project organization
+-   -   **At least** three HTML files, one CSS file and one JS file.
+-   Intentional and coherent design in terms of color and font
+-   High code quality
+-   Coherently commented code
+-   -   Majority of CSS and JavaScript should be subtly commented
+-   Accessive design, eg:
+-   -   Good contrast
+-   -   Alt-texts
+-   -   Clear focus-frames
+-   -   Keyboard navigation
+-   -   (Bonus) Light- and darkmode
+
+### HTML / CSS related
+
+-   Semantic structure
+-   Landing page and 2+ sub-pages
+-   Simple media query / queries
+-   Resonsive layout using flex- / gridbox
+-   Navigational menu that works on all pages
+-   Internal anchor links (site and tags)
+
+### JavaScript
+
+-   At least one function using the DOM
+
+## Structure your project
+
+### Suggested structure from teacher
+
+```
+📁 rtc
+	📄 index.html
+	📁 pages
+		📄 login.html
+		📄 about.html
+	📁 css
+		🎨 index.css
+		🎨 style.css
+		🎨 colors.css
+	📁 images
+		🖼️ a.png
+		🖼️ b.png
+```
+
+### Personal reflections
+
+I did promise to make this project less "overkill" than the last 2, but the suggested folder structure for this particular task seems to be more in line with my previous work.
+The challange I will be facing is following a coherent design without going overboard with the abstractions.  
+So, given the suggested folder structure I believe it is within reason to strucutre the project somewhat like I did before, thus breaking my promise of simplifying my code, but keeping my promise of delivering what the teacher has asked for.
+
+Using an `index.css` file might seem too "professional", but it aligns with modern conventions and makes the code DRY, thus marking the criterias for
+
+-   Correct project organization
+-   High code quality
+
+```
+📁 root
+	📄 index.html
+	📁 pages
+		📄 pricing.html
+		📄 contact.html
+	📁 css
+		🎨 index.css
+		🎨 style.css
+		🎨 button.css
+	📁 javascript
+		⚙️ index.js
+		⚙️ darkmode.js
+		⚙️ nav-injector.js
+	📁 images
+		🖼️ a.png
+		🖼️ b.png
+```
+
+Note to self:  
+Since we will not be making a true SPA, we could cheat persistance by having the navigation menu send `darkmode=1` as a url query when moving between pages. Then we simply run the initialization on the page each load. This could cause the page to flash in lightmode before correcting itself though. Handle it as we go.
