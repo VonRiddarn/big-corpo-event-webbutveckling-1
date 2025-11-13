@@ -1,1 +1,39 @@
 console.log("Injecting navbar...");
+
+// Create and store references for the navbar root object and the navbar list root.
+const navbar = document.createElement("nav");
+const routeList = navbar.appendChild(document.createElement("ul"));
+
+// Create and append routes to the navbar
+addRoutes(["Home", "Pricing", "Contact"], navbar);
+
+// Append the navbar to the body
+document.getElementsByTagName("body")[0].appendChild(navbar);
+
+// ----- Methods -----
+// Using function keyword for hoisting, this keeps the declaration out of the way and the code clean.
+function addRoutes(routes, parent) {
+	// Tokenize the URL into an array of ["https:", ... "index.html"]
+	const urlTokens = document.URL.split("/");
+	// Take the last element and tokenize it into name, type and extract the name (route). ["index", "html"]
+	const currentRoute = urlTokens[urlTokens.length - 1].split(".")[0];
+
+	for (let i = 0; i < routes.length; i++) {
+		const elementRoute = routes[i];
+		console.log(currentRoute);
+		console.log(elementRoute);
+		const selected =
+			(i === 0 && currentRoute === "index") ||
+			elementRoute.toUpperCase() === currentRoute.toUpperCase();
+
+		// We could and add type safety, but I will opt for the classic JS "trust me bro" convention.
+		const li = parent.appendChild(document.createElement("li"));
+		const p = li.appendChild(document.createElement("p"));
+		console.log(document.URL.split("/"));
+		p.innerHTML = elementRoute;
+
+		// Add BEM for styling purposes
+		li.classList.add("route");
+		if (selected) li.classList.add("route--selected");
+	}
+}
