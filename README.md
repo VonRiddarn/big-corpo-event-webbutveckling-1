@@ -2,6 +2,11 @@
 
 Simple HTML, CSS and JavaScript website made for the course "Webbutveckling 1"
 
+## How to run the project
+
+This project uses javascript module imports and therefore need to be ran from a live server.  
+In VSCode right click the `index.html` file and press the "_Open with Live Server_" option.
+
 ## Requirements (A)
 
 ### General
