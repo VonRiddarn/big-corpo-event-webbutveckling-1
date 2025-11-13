@@ -81,7 +81,7 @@ Using an `index.css` file might seem too "professional", but it aligns with mode
 		🖼️ b.png
 ```
 
-_Notice how the project structure is flat and does not contain a separate `src` and `public` folder._
+_Notice how the project structure is flat and does not contain a separate `src` and `public` folder. The `styles` folder is now also named `css`, which is less conventional but more in line with a demonstrative school project._
 
 Note to self:  
 Since we will not be making a true SPA, we could cheat persistance by having the navigation menu send `darkmode=1` as a url query when moving between pages. Then we simply run the initialization on the page each load. This could cause the page to flash in lightmode before correcting itself though. Handle it as we go.
