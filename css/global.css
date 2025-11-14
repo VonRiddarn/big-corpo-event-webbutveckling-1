@@ -1,0 +1,4 @@
+html.darkmode {
+	color: var(--text);
+	background-color: var(--background-primary);
+}
