@@ -13,7 +13,7 @@ console.log("Injecting navbar...");
 
 // Create and store references for the navbar root object and the navbar list root.
 const navbar = document.createElement("nav");
-const routeList = navbar.appendChild(document.createElement("ul"));
+navbar.appendChild(document.createElement("ul"));
 
 // Create and append routes to the navbar
 addRoutes(["Home", "Pricing", "Contact"], navbar);
