@@ -17,7 +17,7 @@ const routeList = navbar.appendChild(document.createElement("ul"));
 addRoutes(["Home", "Pricing", "Contact"], navbar);
 
 // Append the navbar to the body
-document.getElementsByTagName("body")[0].appendChild(navbar);
+document.body.appendChild(navbar);
 
 // ----- Methods -----
 // Using function keyword for hoisting, this keeps the declaration out of the way and the code clean.
