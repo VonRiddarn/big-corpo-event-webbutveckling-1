@@ -31,8 +31,6 @@ function addRoutes(routes, parent) {
 
 	for (let i = 0; i < routes.length; i++) {
 		const elementRoute = routes[i];
-		console.log(currentRoute);
-		console.log(elementRoute);
 		const selected =
 			(i === 0 && currentRoute === "index") ||
 			elementRoute.toUpperCase() === currentRoute.toUpperCase();
@@ -40,7 +38,6 @@ function addRoutes(routes, parent) {
 		// We could and add type safety, but I will opt for the classic JS "trust me bro" convention.
 		const li = parent.appendChild(document.createElement("li"));
 		const p = li.appendChild(document.createElement("p"));
-		console.log(document.URL.split("/"));
 		p.innerHTML = elementRoute;
 
 		// Add BEM for styling purposes

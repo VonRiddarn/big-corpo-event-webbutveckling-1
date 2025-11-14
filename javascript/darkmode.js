@@ -6,6 +6,7 @@
 	State management could be its own system entirely, but this is a simple hack to make it work without over-engineering it.
 */
 
+console.log("Initializing darkmode state...");
 let darkMode = sessionStorage.getItem("darkmode") === "true";
 const bodyEl = document.body;
 const btn = document.createElement("button");
