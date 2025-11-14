@@ -10,6 +10,7 @@ In VSCode right click the `index.html` file and press the "_Open with Live Serve
 ## Features
 
 📁 Coherent folder structure - with flat hierarchy (no src / public)  
+📐 Conventional design structure (SOC, BEM-notation, SRP)  
 🌙 Darkmode toggle  
 📍 Navigation menu  
 ⌛ Persistant session state for navigation menu and theme  
