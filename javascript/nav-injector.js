@@ -9,6 +9,7 @@ console.log("Injecting navbar...");
 
 // Create and store references for the navbar root object and the navbar list root.
 const navbar = document.createElement("nav");
+navbar.classList.add("navbar");
 const ul = navbar.appendChild(document.createElement("ul"));
 
 // Create and append routes to the navbar
@@ -17,6 +18,24 @@ navbar.appendChild(darkmodeButton());
 
 // Append the navbar to the body
 document.body.appendChild(navbar);
+
+// Create the toggle button
+const navBtn = document.createElement("button");
+navBtn.classList.add("navbar-button");
+
+navBtn.addEventListener("click", () => {
+	const active = navbar.classList.contains("navbar--active");
+	if (!active) {
+		navbar.classList.add("navbar--active");
+		navBtn.classList.add("navbar-button--active");
+	} else {
+		navbar.classList.remove("navbar--active");
+		navBtn.classList.remove("navbar-button--active");
+	}
+});
+
+navBtn.innerHTML = "TOGGLE";
+document.body.appendChild(navBtn);
 
 // ----- Methods -----
 // Using function keyword for hoisting, this keeps the declaration out of the way and the code clean.
