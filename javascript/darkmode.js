@@ -1,19 +1,17 @@
 /*
-	This file ccontains the darkmode logic. That includes the button component as well as the persistent state.
-	It works by simply saving the current darkmode setting to the sessions storage and reads it each time the button is created.
-
-	Since the button needs to be recreated through the "darkModeButton" export each time a new HTML file is opened / refreshed this should do fine.
-	State management could be its own system entirely, but this is a simple hack to make it work without over-engineering it.
+	This file ccontains the darkmode toggle logic. That includes the button component as well as the "runtime" state toggle.
+	It works by simply saving the current darkmode setting to the sessions storage and update the html element with the correct state.
+	Pre-loading the darkmode on page load happens in "darkmode-load.js"
 */
 
 console.log("Initializing darkmode state...");
 let darkMode = sessionStorage.getItem("darkmode") === "true";
-const bodyEl = document.body;
+const rootEl = document.documentElement;
 const btn = document.createElement("button");
 
 const applyDarkMode = () => {
-	if (darkMode) bodyEl.classList.add("darkmode");
-	else bodyEl.classList.remove("darkmode");
+	if (darkMode) rootEl.classList.add("darkmode");
+	else rootEl.classList.remove("darkmode");
 };
 
 const toggleDarkMode = () => {
@@ -37,5 +35,3 @@ export const darkmodeButton = () => {
 	updateButton();
 	return btn;
 };
-
-applyDarkMode();
