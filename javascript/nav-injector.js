@@ -1,10 +1,6 @@
 /*
 	This systems purpose is to create and supply a navbar component that can be supplied to several HTML pages.
 	The drawback of creating the navbar using JavaScript is that it could technically affect SEO, but that's not a factor for this project.
-
-	Responsibility ovelap: 
-		This file handles both navbar injection AND routing.
-		It could be neat to transfer routing into its own file for clearer responsibility and readability
 */
 
 import { darkmodeButton } from "./darkmode.js";
