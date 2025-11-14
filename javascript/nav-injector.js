@@ -8,6 +8,7 @@
 */
 
 import { darkmodeButton } from "./darkmode.js";
+import { currentRoute, isRoute } from "./routing.js";
 console.log("Injecting navbar...");
 
 // Create and store references for the navbar root object and the navbar list root.
@@ -24,16 +25,9 @@ document.body.appendChild(navbar);
 // ----- Methods -----
 // Using function keyword for hoisting, this keeps the declaration out of the way and the code clean.
 function addRoutes(routes, parent) {
-	// Tokenize the URL into an array of ["https:", ... "index.html"]
-	const urlTokens = document.URL.split("/");
-	// Take the last element and tokenize it into name, type and extract the name (route). ["index", "html"]
-	const currentRoute = urlTokens[urlTokens.length - 1].split(".")[0];
-
 	for (let i = 0; i < routes.length; i++) {
 		const elementRoute = routes[i];
-		const selected =
-			(i === 0 && currentRoute === "index") ||
-			elementRoute.toUpperCase() === currentRoute.toUpperCase();
+		const selected = (i === 0 && currentRoute === "index") || isRoute(elementRoute);
 
 		// We could and add type safety, but I will opt for the classic JS "trust me bro" convention.
 		const li = parent.appendChild(document.createElement("li"));
