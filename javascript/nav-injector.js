@@ -22,8 +22,7 @@ const navBtn = document.createElement("button");
 navBtn.classList.add("navbar-button");
 
 navBtn.addEventListener("click", () => {
-	toggleIsActive();
-	applyState();
+	setIsActive(!isActive);
 });
 
 navBtn.innerHTML = "TOGGLE";
@@ -46,6 +45,13 @@ function addRoutes(routes, parent) {
 		const a = li.appendChild(document.createElement("a"));
 		a.href = i == 0 ? "/index.html" : `/pages/${elementRoute}.html`;
 		a.innerHTML = elementRoute;
+		a.addEventListener("click", (e) => {
+			// Override default navigation logic to inject a state change before redirecting.
+			// Injected method is disabled for now, but might be something we want later.
+			e.preventDefault();
+			//setIsActive(false);
+			window.location.href = a.href;
+		});
 
 		// Add BEM for styling purposes
 		li.classList.add("route");
@@ -53,13 +59,15 @@ function addRoutes(routes, parent) {
 	}
 }
 
-function toggleIsActive() {
-	isActive = !isActive;
+function setIsActive(newState) {
+	isActive = newState;
 	sessionStorage.setItem("navbar", isActive.toString());
+
+	applyState();
 }
 
 function applyState() {
-	if (!isActive) {
+	if (isActive) {
 		navbar.classList.add("navbar--active");
 		navBtn.classList.add("navbar-button--active");
 	} else {
