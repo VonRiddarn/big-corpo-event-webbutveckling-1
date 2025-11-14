@@ -1,5 +1,5 @@
 /*
-	This file ccontains the darkmode toggle logic. That includes the button component as well as the "runtime" state toggle.
+	This file ccontains the darkmode toggle logic. That includes the button component as well as the runtime state toggle.
 	It works by simply saving the current darkmode setting to the sessions storage and update the html element with the correct state.
 	Pre-loading the darkmode on page load happens in "darkmode-load.js"
 */
