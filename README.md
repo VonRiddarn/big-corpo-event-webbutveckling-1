@@ -7,6 +7,16 @@ Simple HTML, CSS and JavaScript website made for the course "Webbutveckling 1"
 This project uses javascript module imports and therefore need to be ran from a live server.  
 In VSCode right click the `index.html` file and press the "_Open with Live Server_" option.
 
+## Features
+
+📁 Coherent folder structure - with flat hierarchy (no src / public)  
+☀️🌙 Light- / darkmode  
+📍 Navigation menu  
+⌛ Persistant session state for navigation menu and theme  
+🤓 Semantic HTML  
+⚠️ User-error alert system  
+🎨 Coherent and professional design (coming soon)
+
 ## Requirements (A)
 
 ### General
