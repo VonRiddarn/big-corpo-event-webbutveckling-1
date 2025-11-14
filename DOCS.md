@@ -50,8 +50,8 @@ It's not rocket-science or anything, but all the DOM calls can make it hard to f
 2. Append `ul` as a child element for `navbar` element and store reference as `ul`.
 3. For each item in the array sent through `addRoutes`  
    3. 1. Append an `li` element to the parent sent through `addRoutes` (should always be `ul`) - and store a reference to it as `li`  
-   3. 2. Append a `p` element to the `li` and store a reference to it as `p`  
-   3. 3. Set `p`'s innerHTML to be equal to its name in the array  
+   3. 2. Append a `a` element to the `li` and store a reference to it as `a`  
+   3. 3. Set `a`'s innerHTML to be equal to its name in the array 3. 4. If this is the first item, set href to `index.html`, otherwise set it to match the name of the item in the array.  
    3. 4. Add the class `route` to `li`  
    3. 5. If the page route matches the current array item, add `route--selected` to `li`
 

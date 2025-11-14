@@ -27,8 +27,9 @@ function addRoutes(routes, parent) {
 
 		// We could and add type safety, but I will opt for the classic JS "trust me bro" convention.
 		const li = parent.appendChild(document.createElement("li"));
-		const p = li.appendChild(document.createElement("p"));
-		p.innerHTML = elementRoute;
+		const a = li.appendChild(document.createElement("a"));
+		a.href = i == 0 ? "/index.html" : `/pages/${elementRoute}.html`;
+		a.innerHTML = elementRoute;
 
 		// Add BEM for styling purposes
 		li.classList.add("route");
