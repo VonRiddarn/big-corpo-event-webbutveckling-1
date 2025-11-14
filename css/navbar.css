@@ -1,4 +1,13 @@
-nav {
+/*
+	TODO: Make a slide out / in animation with position fixed to viewport instead of using display: none
+*/
+
+.navbar {
+	display: none;
 	background-color: rgba(33, 35, 53, 0.075);
-	padding: 5rem;
+	padding: 2rem;
+}
+
+.navbar--active {
+	display: block;
 }
