@@ -88,5 +88,11 @@ Using an `index.css` file might seem too "professional", but it aligns with mode
 
 _Notice how the project structure is flat and does not contain a separate `src` and `public` folder. The `styles` folder is now also named `css`, which is less conventional but more in line with a demonstrative school project._
 
-Note to self:  
-Since we will not be making a true SPA, we could cheat persistance by having the navigation menu send `darkmode=1` as a url query when moving between pages. Then we simply run the initialization on the page each load. This could cause the page to flash in lightmode before correcting itself though. Handle it as we go.
+#### Note
+
+The project has grown unexpectedly advanced in a very short time.  
+When I wanted to implement the navbar, I realized I needed routing if I want to have a "current page" select effect. Thus routing was added.  
+Then I wanted to add darkmode, and I realized I need to load some files before page load, and some after page load, so the darkmode was split into 2 files.  
+This does all align with the criteria of "High code quality", but it could be viewed as extremely overkill for the project.
+
+I "solved" this by adding clear top-of-file comments as well as a designated DOCS file for easier onboarding / overview.
