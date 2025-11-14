@@ -1,0 +1,19 @@
+/* Default styling module. Removes CSS quirks. */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+	color: inherit;
+}
+
+a:hover {
+	color: var(--text-href);
+}
+
+a {
+	color: inherit;
+}

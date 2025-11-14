@@ -1,9 +1,11 @@
 :root {
 	--text: #0e0e13;
+	--text-href: #2f56a8;
 	--background-primary: #ebebeb;
 }
 
 .darkmode {
 	--text: #ebebeb;
+	--text-href: #90c9ff;
 	--background-primary: #0e0e13;
 }
