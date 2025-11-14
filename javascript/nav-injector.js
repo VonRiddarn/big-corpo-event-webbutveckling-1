@@ -8,6 +8,7 @@ import { currentRoute, isRoute } from "./routing.js";
 console.log("Injecting navbar...");
 
 // Create and store references for the navbar root object and the navbar list root.
+let isActive = sessionStorage.getItem("navbar") === "true";
 const navbar = document.createElement("nav");
 navbar.classList.add("navbar");
 const ul = navbar.appendChild(document.createElement("ul"));
@@ -16,26 +17,22 @@ const ul = navbar.appendChild(document.createElement("ul"));
 addRoutes(["Home", "Pricing", "Contact"], ul);
 navbar.appendChild(darkmodeButton());
 
-// Append the navbar to the body
-document.body.appendChild(navbar);
-
 // Create the toggle button
 const navBtn = document.createElement("button");
 navBtn.classList.add("navbar-button");
 
 navBtn.addEventListener("click", () => {
-	const active = navbar.classList.contains("navbar--active");
-	if (!active) {
-		navbar.classList.add("navbar--active");
-		navBtn.classList.add("navbar-button--active");
-	} else {
-		navbar.classList.remove("navbar--active");
-		navBtn.classList.remove("navbar-button--active");
-	}
+	toggleIsActive();
+	applyState();
 });
 
 navBtn.innerHTML = "TOGGLE";
+
+// Append items
 document.body.appendChild(navBtn);
+document.body.appendChild(navbar);
+
+applyState();
 
 // ----- Methods -----
 // Using function keyword for hoisting, this keeps the declaration out of the way and the code clean.
@@ -53,5 +50,20 @@ function addRoutes(routes, parent) {
 		// Add BEM for styling purposes
 		li.classList.add("route");
 		if (selected) li.classList.add("route--selected");
+	}
+}
+
+function toggleIsActive() {
+	isActive = !isActive;
+	sessionStorage.setItem("navbar", isActive.toString());
+}
+
+function applyState() {
+	if (!isActive) {
+		navbar.classList.add("navbar--active");
+		navBtn.classList.add("navbar-button--active");
+	} else {
+		navbar.classList.remove("navbar--active");
+		navBtn.classList.remove("navbar-button--active");
 	}
 }
