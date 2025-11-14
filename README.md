@@ -88,7 +88,7 @@ Using an `index.css` file might seem too "professional", but it aligns with mode
 
 _Notice how the project structure is flat and does not contain a separate `src` and `public` folder. The `styles` folder is now also named `css`, which is less conventional but more in line with a demonstrative school project._
 
-#### Note
+#### Noteworthy
 
 The project has grown unexpectedly advanced in a very short time.  
 When I wanted to implement the navbar, I realized I needed routing if I want to have a "current page" select effect. Thus routing was added.  
