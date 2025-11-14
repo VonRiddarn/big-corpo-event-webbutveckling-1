@@ -22,7 +22,7 @@ In VSCode right click the `index.html` file and press the "_Open with Live Serve
 -   -   [ ] Alt-texts
 -   -   [ ] Clear focus-frames
 -   -   [ ] Keyboard navigation
--   -   [ ] (Bonus) Light- and darkmode
+-   -   [x] (Bonus) Light- and darkmode
 
 ### HTML / CSS related
 
