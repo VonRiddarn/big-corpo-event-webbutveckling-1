@@ -1,5 +1,4 @@
 /*
-	The navbar injector
 	This systems purpose is to create and supply a navbar component that can be supplied to several HTML pages.
 	The drawback of creating the navbar using JavaScript is that it could technically affect SEO, but that's not a factor for this project.
 
@@ -7,6 +6,8 @@
 		This file handles both navbar injection AND routing.
 		It could be neat to transfer routing into its own file for clearer responsibility and readability
 */
+
+import { darkmodeButton } from "./darkmode.js";
 console.log("Injecting navbar...");
 
 // Create and store references for the navbar root object and the navbar list root.
@@ -15,6 +16,7 @@ const routeList = navbar.appendChild(document.createElement("ul"));
 
 // Create and append routes to the navbar
 addRoutes(["Home", "Pricing", "Contact"], navbar);
+navbar.appendChild(darkmodeButton());
 
 // Append the navbar to the body
 document.body.appendChild(navbar);
