@@ -64,6 +64,24 @@
 	transform: translateX(0);
 }
 
+/* 
+	This could've been its own CSS file, and it was supposed to, but I simplified it to fit a smaller scope.
+	It works here because we will never use the button separate from the navbar.
+*/
+.darkmode-button {
+	aspect-ratio: 1/1;
+	width: 64px;
+	border-radius: 50%;
+	font-size: xx-large;
+
+	border: none;
+	background-color: transparent;
+}
+
+.darkmode-button:hover {
+	background-color: rgba(76, 69, 104, 0.13);
+}
+
 /* Make the active navbar take up the entire screen on tablets and phones */
 @media (max-width: 1024px) {
 	.navbar {
