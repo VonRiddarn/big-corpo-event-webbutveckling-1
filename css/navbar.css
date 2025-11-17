@@ -34,7 +34,8 @@
 	min-width: 33vw;
 
 	/* Style it */
-	background-color: rgba(25, 28, 49, 0.164);
+	background-color: rgba(0, 0, 0, 0.042);
+	backdrop-filter: blur(8px);
 	padding: 2rem;
 
 	/* Move the element to the right by its own width and add an animationlistener to it */
