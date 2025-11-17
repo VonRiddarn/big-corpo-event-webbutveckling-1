@@ -34,8 +34,15 @@
 	min-width: 33vw;
 
 	/* Style it */
-	background-color: rgba(0, 0, 0, 0.042);
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.1);
 	backdrop-filter: blur(8px);
+	text-align: center;
+
 	padding: 2rem;
 
 	/* Move the element to the right by its own width and add an animationlistener to it */
@@ -44,6 +51,12 @@
 
 	/* Make sure it is in front of conten but behind the floaty button */
 	z-index: 1;
+}
+
+.navbar ul {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
 }
 
 .navbar--active {
