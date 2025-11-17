@@ -66,7 +66,7 @@
 
 /* Make the active navbar take up the entire screen on tablets and phones */
 @media (max-width: 1024px) {
-	.navbar--active {
+	.navbar {
 		min-width: 100vw;
 	}
 }
