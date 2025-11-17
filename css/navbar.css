@@ -4,7 +4,7 @@
 
 .navbar-button {
 	/* Make the button float at the top right of the viewport. */
-	position: absolute;
+	position: fixed;
 	top: 24px;
 	right: 24px;
 
@@ -17,6 +17,7 @@
 	border-radius: 50%;
 	font-size: x-large;
 	background-color: transparent;
+	backdrop-filter: blur(1px);
 
 	/* Make this the toppest of top layers.*/
 	z-index: 2;
@@ -26,7 +27,7 @@
 
 .navbar {
 	/* Set default size and position */
-	position: absolute;
+	position: fixed;
 	top: 0;
 	right: 0;
 	height: 100vh;
@@ -81,8 +82,8 @@
 	background-color: rgba(76, 69, 104, 0.13);
 }
 
-/* Make the active navbar take up the entire screen on tablets and phones */
 @media (max-width: 1024px) {
+	/* Make the active navbar take up the entire screen on tablets and phones */
 	.navbar {
 		min-width: 100vw;
 	}
