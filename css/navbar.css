@@ -2,12 +2,57 @@
 	TODO: Make a slide out / in animation with position fixed to viewport instead of using display: none
 */
 
+.navbar-button {
+	/* Make the button float at the top right of the viewport. */
+	position: absolute;
+	top: 24px;
+	right: 24px;
+
+	/* Make it a somewhat expected size. */
+	aspect-ratio: 1/1;
+	width: 48px;
+
+	/* Style it */
+	border: none;
+	border-radius: 50%;
+
+	/* Make this the toppest of top layers.*/
+	z-index: 2;
+}
+
+.navbar-button--active {
+}
+
+/* TODO: Add a dedicated background so that we can use filter blur*/
+
 .navbar {
-	display: none;
-	background-color: rgba(33, 35, 53, 0.075);
+	/* Set default size and position */
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100vh;
+	min-width: 33vw;
+
+	/* Style it */
+	background-color: rgba(25, 28, 49, 0.164);
 	padding: 2rem;
+
+	/* Move the element to the right by its own width and add an animationlistener to it */
+	transform: translateX(100%);
+	transition: transform 0.25s ease;
+
+	/* Make sure it is in front of conten but behind the floaty button */
+	z-index: 1;
 }
 
 .navbar--active {
-	display: block;
+	/* Reset the value to 0 and thus activate the animation */
+	transform: translateX(0);
+}
+
+/* Make the active navbar take up the entire screen on tablets and phones */
+@media (max-width: 1024px) {
+	.navbar--active {
+		min-width: 100vw;
+	}
 }
