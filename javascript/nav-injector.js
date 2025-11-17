@@ -25,8 +25,6 @@ navBtn.addEventListener("click", () => {
 	setIsActive(!isActive);
 });
 
-navBtn.innerHTML = "TOGGLE";
-
 // Append items
 document.body.appendChild(navBtn);
 document.body.appendChild(navbar);
@@ -74,4 +72,6 @@ function applyState() {
 		navbar.classList.remove("navbar--active");
 		navBtn.classList.remove("navbar-button--active");
 	}
+
+	navBtn.innerHTML = isActive ? "✖️" : "🟰";
 }
