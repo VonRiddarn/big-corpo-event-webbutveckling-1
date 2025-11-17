@@ -15,6 +15,8 @@
 	/* Style it */
 	border: none;
 	border-radius: 50%;
+	font-size: x-large;
+	background-color: transparent;
 
 	/* Make this the toppest of top layers.*/
 	z-index: 2;
