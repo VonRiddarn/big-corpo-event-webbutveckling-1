@@ -24,29 +24,29 @@ In VSCode right click the `index.html` file and press the "_Open with Live Serve
 
 -   [x] Correct project organization
 -   -   [x] **At least** three HTML files, one CSS file and one JS file.
--   [ ] Intentional and coherent design in terms of color and font
+-   [x] Intentional and coherent design in terms of color and font
 -   [x] High code quality
 -   [x] Coherently commented code
 -   -   [x] Majority of CSS and JavaScript should be subtly commented
 -   [ ] Accessive design, eg:
--   -   [ ] Good contrast
+-   -   [x] Good contrast
 -   -   [ ] Alt-texts
 -   -   [ ] Clear focus-frames
--   -   [ ] Keyboard navigation
+-   -   [x] Keyboard navigation - with some quirks tbh
 -   -   [x] (Bonus) Light- and darkmode
 
 ### HTML / CSS related
 
--   [ ] Semantic structure
+-   [x] Semantic structure
 -   [x] Landing page and 2+ sub-pages
--   [ ] Simple media query / queries
--   [ ] Resonsive layout using flex- / gridbox
+-   [x] Simple media query / queries
+-   [x] Responsive layout using flex- / gridbox
 -   [x] Navigational menu that works on all pages
--   [ ] Internal anchor links (site and tags)
+-   [x] Internal anchor links (site and tags) - No tag links though
 
 ### JavaScript
 
--   At least one function using the DOM
+-   [x] At least one function using the DOM
 
 ## Structure your project
 
