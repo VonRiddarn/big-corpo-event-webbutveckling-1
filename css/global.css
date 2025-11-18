@@ -55,3 +55,51 @@ h5,
 h6 {
 	color: var(--text-header);
 }
+
+/* Utilities, could be its own CSS file. */
+.noselect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Used on pricing page, could be its own CSS file. */
+.card-list {
+	/* Align content */
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+
+.card-list li {
+	/* Size */
+	max-width: 200px;
+
+	/* Style */
+	box-shadow: 0 6px 12px var(--button-shadow);
+	padding: 1rem;
+	transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+}
+
+.card-list li:hover {
+	/* Harware */
+	cursor: pointer;
+
+	/* Animation */
+	transform: translateY(-16px);
+	box-shadow: 0 22px 32px var(--button-shadow);
+}
+
+.card-list li article {
+	/* Align content */
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	text-align: center;
+}
