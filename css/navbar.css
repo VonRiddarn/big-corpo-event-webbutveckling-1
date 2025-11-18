@@ -23,6 +23,10 @@
 	z-index: 2;
 }
 
+.navbar-button:hover {
+	background-color: rgba(0, 0, 0, 0.12);
+}
+
 /* TODO: Add a dedicated background so that we can use filter blur*/
 
 .navbar {

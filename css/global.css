@@ -1,6 +1,40 @@
-html.darkmode {
+html {
 	color: var(--text);
 	background-color: var(--background-primary);
+}
+
+button {
+	background-color: var(--button);
+}
+
+button:hover {
+	background-color: var(--button-hover);
+}
+
+header {
+	/* Align content */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 3rem;
+	text-align: center;
+
+	/* Set size */
+	min-width: 100vw;
+	min-height: 44svh;
+
+	/* Style */
+	background-color: rgba(0, 119, 255, 0.151);
+}
+
+header button {
+	padding: 1rem;
+	border: none;
+	border-radius: 8px;
+
+	font-weight: 600;
+	box-shadow: 0 6px 12px var(--button-shadow);
 }
 
 main {

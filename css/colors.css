@@ -1,13 +1,20 @@
 :root {
 	--text: #0e0e13;
-	--text-header: #ff6600;
+	--text-header: #0066ff;
 	--text-href: #2f56a8;
-	--background-primary: #cfcfcf;
+	--background-primary: #ebebeb;
+
+	--button: #ffff00;
+	--button-hover: #ffee00;
+	--button-shadow: rgba(0, 0, 0, 0.16);
 }
 
 .darkmode {
-	--text: #cfcfcf;
+	--text: #ebebeb;
 	--text-header: #e29f67;
 	--text-href: #90c9ff;
 	--background-primary: #0e0e13;
+	--button: #ffff44;
+	--button-hover: #fff241;
+	--button-shadow: rgba(255, 255, 255, 0.16);
 }
