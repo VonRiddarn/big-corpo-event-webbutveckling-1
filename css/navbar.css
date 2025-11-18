@@ -1,7 +1,3 @@
-/*
-	TODO: Make a slide out / in animation with position fixed to viewport instead of using display: none
-*/
-
 .navbar-button {
 	/* Make the button float at the top right of the viewport. */
 	position: fixed;
