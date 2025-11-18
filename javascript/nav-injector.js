@@ -40,9 +40,18 @@ function addRoutes(routes, parent) {
 
 		// We could and add type safety, but I will opt for the classic JS "trust me bro" convention.
 		const li = parent.appendChild(document.createElement("li"));
-		const a = li.appendChild(document.createElement("a"));
-		a.href = i == 0 ? "/index.html" : `/pages/${elementRoute}.html`;
+		const a = li.appendChild(selected ? document.createElement("p") : document.createElement("a"));
 		a.innerHTML = elementRoute;
+		li.classList.add("route");
+
+		// Early return for selected styling and actions
+		if (selected) {
+			a.classList.add("noselect");
+			li.classList.add("route--selected");
+			continue;
+		}
+
+		a.href = i == 0 ? "/index.html" : `/pages/${elementRoute}.html`;
 		a.addEventListener("click", (e) => {
 			// Override default navigation logic to inject a state change before redirecting.
 			// Injected method is disabled for now, but might be something we want later.
@@ -52,8 +61,6 @@ function addRoutes(routes, parent) {
 		});
 
 		// Add BEM for styling purposes
-		li.classList.add("route");
-		if (selected) li.classList.add("route--selected");
 	}
 }
 

@@ -59,6 +59,11 @@
 	font-size: xx-large;
 }
 
+.route--selected {
+	color: var(--text-header);
+	text-decoration: underline;
+}
+
 .navbar ul {
 	display: flex;
 	flex-direction: column;
