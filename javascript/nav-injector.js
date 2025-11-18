@@ -47,7 +47,7 @@ function addRoutes(routes, parent) {
 			// Override default navigation logic to inject a state change before redirecting.
 			// Injected method is disabled for now, but might be something we want later.
 			e.preventDefault();
-			//setIsActive(false);
+			setIsActive(false);
 			window.location.href = a.href;
 		});
 
