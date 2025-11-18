@@ -1,11 +1,13 @@
 :root {
 	--text: #0e0e13;
+	--text-header: #ff6600;
 	--text-href: #2f56a8;
-	--background-primary: #ebebeb;
+	--background-primary: #cfcfcf;
 }
 
 .darkmode {
-	--text: #ebebeb;
+	--text: #cfcfcf;
+	--text-header: #e29f67;
 	--text-href: #90c9ff;
 	--background-primary: #0e0e13;
 }

@@ -2,3 +2,20 @@ html.darkmode {
 	color: var(--text);
 	background-color: var(--background-primary);
 }
+
+main {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	max-width: 1024px;
+	margin: 2rem auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--text-header);
+}
