@@ -59,8 +59,6 @@ function addRoutes(routes, parent) {
 			setIsActive(false);
 			window.location.href = a.href;
 		});
-
-		// Add BEM for styling purposes
 	}
 }
 
