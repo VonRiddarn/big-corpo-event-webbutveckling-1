@@ -45,7 +45,6 @@
 	align-items: center;
 	background-color: rgba(0, 0, 0, 0.1);
 	backdrop-filter: blur(8px);
-	text-align: center;
 
 	padding: 2rem;
 
@@ -55,6 +54,13 @@
 
 	/* Make sure it is in front of conten but behind the floaty button */
 	z-index: 1;
+}
+
+.navbar * {
+	text-decoration: none;
+	text-align: center;
+	font-weight: 600;
+	font-size: xx-large;
 }
 
 .navbar ul {
