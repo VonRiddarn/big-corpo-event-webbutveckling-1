@@ -1,8 +1,7 @@
-import "./nav-injector.js"; // Runs the injector script and makes sure we have a nav bar.
 console.log("Hello world!");
 
 document.getElementById("call-to-action-btn")?.addEventListener("click", (e) => {
-	window.location.href = "../pages/pricing.html";
+	window.location.href = "./pricing.html";
 });
 
 const cards = document.getElementsByClassName("pricing-card");

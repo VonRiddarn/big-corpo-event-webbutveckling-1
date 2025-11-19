@@ -3,8 +3,6 @@
 	The drawback of creating the navbar using JavaScript is that it could technically affect SEO, but that's not a factor for this project.
 */
 
-import { darkmodeButton } from "./darkmode.js";
-import { currentRoute, isRoute } from "./routing.js";
 console.log("Injecting navbar...");
 
 // Create and store references for the navbar root object and the navbar list root.
@@ -15,7 +13,7 @@ const ul = navbar.appendChild(document.createElement("ul"));
 
 // Create and append routes to the navbar
 addRoutes(["Home", "Pricing", "Contact"], ul);
-navbar.appendChild(darkmodeButton());
+navbar.appendChild(window.darkmodeButton());
 
 // Create the toggle button
 const navBtn = document.createElement("button");
@@ -36,7 +34,8 @@ applyState();
 function addRoutes(routes, parent) {
 	for (let i = 0; i < routes.length; i++) {
 		const elementRoute = routes[i];
-		const selected = (i === 0 && currentRoute === "index") || isRoute(elementRoute);
+		const selected =
+			(i === 0 && window.router.currentRoute === "index") || window.router.isRoute(elementRoute);
 
 		// We could and add type safety, but I will opt for the classic JS "trust me bro" convention.
 		const li = parent.appendChild(document.createElement("li"));
@@ -51,7 +50,7 @@ function addRoutes(routes, parent) {
 			continue;
 		}
 
-		a.href = i == 0 ? "/index.html" : `/pages/${elementRoute}.html`;
+		a.href = i == 0 ? `./index.html` : `./${elementRoute}.html`;
 		a.addEventListener("click", (e) => {
 			// Override default navigation logic to inject a state change before redirecting.
 			// Injected method is disabled for now, but might be something we want later.

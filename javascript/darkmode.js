@@ -27,7 +27,7 @@ const updateButton = () => {
 };
 
 // Always called by the navigation component, meaning this also acts as a "first render" logic container.
-export const darkmodeButton = () => {
+window.darkmodeButton = () => {
 	btn.addEventListener("click", () => {
 		toggleDarkMode();
 		updateButton();
